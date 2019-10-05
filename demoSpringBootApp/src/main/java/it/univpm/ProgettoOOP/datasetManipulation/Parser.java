@@ -29,7 +29,8 @@ public class Parser
 	{
 		
 		csvReader = new BufferedReader(new FileReader(dataset));
-        
+		csvReader.readLine();       
+		
 		while ((str = csvReader.readLine()) != null)
         {
 			line = str.split("[;,]");

@@ -9,9 +9,6 @@ import it.univpm.ProgettoOOP.model.Metadata;
 public class SavedData
 {
 	private static ArrayList<FisherAid> arrFisherAid = new ArrayList<FisherAid>();
-	public static ArrayList<FisherAid> getArrFisherAid() {
-		return arrFisherAid;
-	}
 
 	public static void setArrFisherAid(ArrayList<FisherAid> arrFisherAid) {
 		SavedData.arrFisherAid = arrFisherAid;
@@ -47,7 +44,7 @@ public class SavedData
 		arrMeta.add(new Metadata("2017", "2017", "float"));
 	}
 	
-	public static ArrayList<FisherAid> getarrFisherrAid() {
+	public static ArrayList<FisherAid> getArrFisherAid() {
 		return arrFisherAid;
 	}
 	
