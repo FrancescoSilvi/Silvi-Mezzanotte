@@ -20,7 +20,7 @@ public class Parser
 	public Parser(String dataset)
 	{
 		this.dataset = dataset;
-		this.afa = SavedData.getArrFisherAid();
+		this.afa = SavedData.getArrFisherAid();		//l'array è stato popolato
 	}
 	/**
 	 * Memorizza le informazioni del dataset in un Arraylist di oggetti
