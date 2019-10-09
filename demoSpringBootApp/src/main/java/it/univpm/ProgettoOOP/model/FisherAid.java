@@ -1,5 +1,9 @@
 package it.univpm.ProgettoOOP.model;
 
+import java.util.ArrayList;
+
+import it.univpm.ProgettoOOP.data.SavedData;
+
 public class FisherAid {
 	
 	private String Freq;
@@ -32,7 +36,13 @@ public class FisherAid {
 	public float[] getAnni() {
 		return Anni;
 	}
-
+	
+ 
+	public float getAnno(int j, int i) {
+		float[] Anni = SavedData.getArrFisherAid().get(i).getAnni();
+		return Anni[j];
+	}
+	
 
 
 }

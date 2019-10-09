@@ -17,13 +17,14 @@ public Filters(ArrayList<FisherAid> AiutiPesca) {
 }
 
 public static boolean check (Object CampoRic, String operator, Object val) {
-	if(val instanceof Number && CampoRic instanceof Number) {
+	if(val instanceof String && CampoRic instanceof String) {
 		
-	}else if(val instanceof String && CampoRic instanceof String) {
+	}else if(val instanceof Number && CampoRic instanceof Number) {
 		switch (operator) {
 		case "gt":	//>
 			for(int i=0; i<SavedData.getArrFisherAid().size();i++) {
-				if(SavedData.getArrFisherAid().get(i).getClass().get()!=val1);  //stampare in JSON
+				for(int j=0; j<SavedData.getArrFisherAid().get(i).getAnni().length;j++)
+				if(SavedData.getArrFisherAid().get(i).getAnno(j, i) > (float)val); //da aggiungere conseguenze
 			}
 			break;
 		case "gte":	//>=
@@ -32,8 +33,8 @@ public static boolean check (Object CampoRic, String operator, Object val) {
 			break;
 		case "lte":	//<=
 			break;
-		case "bt":	//=<value>=
-			break;
+	//	case "bt":	//=<value>=
+	//		break;
 		}
 	}
 	return true;
