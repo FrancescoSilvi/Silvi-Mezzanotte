@@ -16,8 +16,26 @@ public Filters(ArrayList<FisherAid> AiutiPesca) {
 		
 }
 
-public static boolean check (String val, String operator, String CampoRic) {
-	
+public static boolean check (Object CampoRic, String operator, Object val) {
+	if(val instanceof Number && CampoRic instanceof Number) {
+		
+	}else if(val instanceof String && CampoRic instanceof String) {
+		switch (operator) {
+		case "gt":	//>
+			for(int i=0; i<SavedData.getArrFisherAid().size();i++) {
+				if(SavedData.getArrFisherAid().get(i).getClass().get()!=val1);  //stampare in JSON
+			}
+			break;
+		case "gte":	//>=
+			break;
+		case "lt":	//<
+			break;
+		case "lte":	//<=
+			break;
+		case "bt":	//=<value>=
+			break;
+		}
+	}
 	return true;
 	//return false;
 }
@@ -29,7 +47,7 @@ public ArrayList<FisherAid> selected(ArrayList<FisherAid> selec, String val, Str
 			Method m = indice.getClass().getMethod("get"+CampoRic.substring(0,1).toUpperCase()+CampoRic.substring(1), null);
 			try {
 				Object tmp = m.invoke(indice);
-				if (Filters.check(val, operator, CampoRic))
+				if (Filters.check(CampoRic, operator, val))
 					out.add(indice);
 			}catch (IllegalAccessException e) {
 				e.printStackTrace();
