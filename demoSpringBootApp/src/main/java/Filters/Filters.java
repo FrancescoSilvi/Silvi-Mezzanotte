@@ -16,40 +16,53 @@ public Filters(ArrayList<FisherAid> AiutiPesca) {
 		
 }
 
-public static boolean check (Object CampoRic, String operator, Object val) {
-	if(val instanceof String && CampoRic instanceof String) {
-		
-	}else if(val instanceof Number && CampoRic instanceof Number) {
+public static boolean check (Object ValRif, String operator, Object val) {
+	if(val instanceof String && ValRif instanceof String) {
+		switch (operator) {
+		case "in":	//>
+			if ((String)val==(String)ValRif) return true;
+			return false;
+		case "nin":
+			if ((String)val!=(String)ValRif) return true;
+			return false;
+		}
+	}else if(val instanceof Number && ValRif instanceof Number) {
 		switch (operator) {
 		case "gt":	//>
-			for(int i=0; i<SavedData.getArrFisherAid().size();i++) {
-				for(int j=0; j<SavedData.getArrFisherAid().get(i).getAnni().length;j++)
-				if(SavedData.getArrFisherAid().get(i).getAnno(j, i) > (float)val); //da aggiungere conseguenze
-			}
-			break;
+			if ((float)val>(float)ValRif) return true;
+			return false;
 		case "gte":	//>=
-			break;
+			if ((float)val>=(float)ValRif) return true;
+			return false;
 		case "lt":	//<
-			break;
+			if ((float)val<(float)ValRif) return true;
+			return false;
 		case "lte":	//<=
-			break;
+			if ((float)val<=(float)ValRif) return true;
+			return false;
+		case "in":	//==
+			if((float)val==(float)ValRif) return true;
+			return false;
+		case "nin":	//==
+			if((float)val!=(float)ValRif) return true;
+			return false;
 	//	case "bt":	//=<value>=
 	//		break;
 		}
 	}
-	return true;
-	//return false;
+	return false;
 }
 
-public ArrayList<FisherAid> selected(ArrayList<FisherAid> selec, String val, String operator, String CampoRic){
+public ArrayList<FisherAid> selected(ArrayList<FisherAid> selec, String CampoRic, String operator, String val){
 	ArrayList<FisherAid> out = new ArrayList<FisherAid>();
-	for(FisherAid indice : AiutiPesca) {
+	for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 		try {
 			Method m = indice.getClass().getMethod("get"+CampoRic.substring(0,1).toUpperCase()+CampoRic.substring(1), null);
+			//la riga precedente crea un metodo in base al campo di ricerca
 			try {
-				Object tmp = m.invoke(indice);
-				if (Filters.check(CampoRic, operator, val))
-					out.add(indice);
+				Object tmp = m.invoke(indice);	//richiama il metodo creato da Method
+				if (Filters.check(tmp, operator, val))
+					out.add(indice);	//add aggiunge una riga ad out
 			}catch (IllegalAccessException e) {
 				e.printStackTrace();
 			}catch (IllegalArgumentException e) {

@@ -36,5 +36,11 @@ public class RestControllerClass
 		return SavedData.getArrMeta();
 	}
 	
+	@GetMapping("/filter")
+	public ArrayList<Metadata> stampaMeta()
+	{
+		return SavedData.getArrMeta();
+	}
+	
 
 }
