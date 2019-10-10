@@ -34,19 +34,32 @@ public class StatsCalc {
 	}
 
 	public float Avg() {
-	
+		return Sum()/Count();
 	}	
 
 	public float Max() {
-	
+		float max = 0;
+		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
+			if (max < SavedData.getArrFisherAid().get(i).getAnno(j, i))
+				max = SavedData.getArrFisherAid().get(i).getAnno(j, i);
+		return max;
 	}
 	
 	public float Min() {
-	
+		float min = 0;
+		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
+			if (min > SavedData.getArrFisherAid().get(i).getAnno(j, i))
+				min = SavedData.getArrFisherAid().get(i).getAnno(j, i);
+		return min;
 	}
 
 	public float DevSt() {
-	
+	float devst2 = 0;
+	float media = Avg();
+	float num = Count();
+	for(int i = 0; i < Count(); i++)
+		devst2 += (SavedData.getArrFisherAid().get(i).getAnno(j, i)-media)/num;
+	return (float)Math.sqrt(devst2);		
 	}
 	
 	public  ArrayList<StatObj> stats (ArrayList<FisherAid> fas){
