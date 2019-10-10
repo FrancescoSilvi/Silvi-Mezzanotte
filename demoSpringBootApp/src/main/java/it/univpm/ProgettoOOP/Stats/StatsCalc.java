@@ -21,15 +21,15 @@ public class StatsCalc {
 	
 	public int Count() {
 		int num = 0;
-		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
-			if(SavedData.getArrFisherAid().get(i).getAnno(j, i) >= 0) num++;
+		for(int i = 0; i < afa.size(); i++)
+			if(afa.get(i).getAnno(j, i) >= 0) num++;
 		return num;
 	}
 	
 	public float Sum () {
 		float sum = 0;
-		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
-			sum += SavedData.getArrFisherAid().get(i).getAnno(j, i);
+		for(int i = 0; i < afa.size(); i++)
+			sum += afa.get(i).getAnno(j, i);
 		return sum;
 	}
 
@@ -39,17 +39,17 @@ public class StatsCalc {
 
 	public float Max() {
 		float max = 0;
-		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
-			if (max < SavedData.getArrFisherAid().get(i).getAnno(j, i))
-				max = SavedData.getArrFisherAid().get(i).getAnno(j, i);
+		for(int i = 0; i < afa.size(); i++)
+			if (max < afa.get(i).getAnno(j, i))
+				max = afa.get(i).getAnno(j, i);
 		return max;
 	}
 	
 	public float Min() {
 		float min = 0;
-		for(int i = 0; i < SavedData.getArrFisherAid().size(); i++)
-			if (min > SavedData.getArrFisherAid().get(i).getAnno(j, i))
-				min = SavedData.getArrFisherAid().get(i).getAnno(j, i);
+		for(int i = 0; i < afa.size(); i++)
+			if (min > afa.get(i).getAnno(j, i))
+				min = afa.get(i).getAnno(j, i);
 		return min;
 	}
 
@@ -58,7 +58,7 @@ public class StatsCalc {
 	float media = Avg();
 	float num = Count();
 	for(int i = 0; i < Count(); i++)
-		devst2 += (SavedData.getArrFisherAid().get(i).getAnno(j, i)-media)/num;
+		devst2 += (afa.get(i).getAnno(j, i)-media)/num;
 	return (float)Math.sqrt(devst2);		
 	}
 	
