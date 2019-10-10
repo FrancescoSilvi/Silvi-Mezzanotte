@@ -1,20 +1,18 @@
 package it.univpm.ProgettoOOP.controller;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import Filters.Filters;
 import it.univpm.ProgettoOOP.data.SavedData;
-//import it.univpm.ProgettoOOP.filter.FeaturFilter;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
-//import it.univpm.ProgettoOOP.statistics.NumberStat;
-//import it.univpm.ProgettoOOP.statistics.ResultNum;
-//import it.univpm.ProgettoOOP.statistics.ResultStr;
-//import it.univpm.ProgettoOOP.statistics.StringStat;
 
 @RestController
 public class RestControllerClass
@@ -36,11 +34,10 @@ public class RestControllerClass
 		return SavedData.getArrMeta();
 	}
 	
-	@GetMapping("/filter")
-	public ArrayList<Metadata> stampaMeta()
-	{
-		return SavedData.getArrMeta();
+	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"attribute", "operator", "value"})
+	public ArrayList<FisherAid> getData(@RequestParam String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	
+		return new Filters().selected(CampoRic, operator, val);
 	}
 	
-
 }

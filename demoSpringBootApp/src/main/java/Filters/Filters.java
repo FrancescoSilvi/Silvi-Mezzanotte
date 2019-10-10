@@ -3,18 +3,16 @@ package Filters;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Collection;
 
 import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 public class Filters {
-ArrayList<FisherAid> AiutiPesca;
+ArrayList<FisherAid> AiutiPesca = SavedData.getArrFisherAid();
 
-public Filters(ArrayList<FisherAid> AiutiPesca) {
-	this.AiutiPesca=AiutiPesca;
-		
-}
+//public Filters (ArrayList<FisherAid> AiutiPesca) {
+//	this.AiutiPesca = AiutiPesca;
+//}
 
 public static boolean check (Object ValRif, String operator, Object val) {
 	if(val instanceof String && ValRif instanceof String) {	//per le stringhe
@@ -53,7 +51,7 @@ public static boolean check (Object ValRif, String operator, Object val) {
 	return false;
 }
 
-public ArrayList<FisherAid> selected(ArrayList<FisherAid> selec, String CampoRic, String operator, String val){
+public ArrayList<FisherAid> selected(String CampoRic, String operator, String val){
 	ArrayList<FisherAid> out = new ArrayList<FisherAid>();
 	for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 		try {

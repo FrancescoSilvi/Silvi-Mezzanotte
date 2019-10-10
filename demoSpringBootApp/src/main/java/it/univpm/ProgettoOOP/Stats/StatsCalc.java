@@ -1,8 +1,6 @@
 package it.univpm.ProgettoOOP.Stats;
 
 import java.util.ArrayList;
-
-import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 public class StatsCalc {
