@@ -1,6 +1,8 @@
 package it.univpm.ProgettoOOP.Stats;
 
 import java.util.ArrayList;
+
+import it.univpm.ProgettoOOP.model.CellAnno;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 public class StatsCalc {
@@ -11,8 +13,8 @@ public class StatsCalc {
 	public StatsCalc (ArrayList<FisherAid> afa, String Colonna) {
 		try{
 			this.afa = afa;
-			if(Integer.parseInt(Colonna)<=2017 && Integer.parseInt(Colonna)>=2000)
-				j = Integer.parseInt(Colonna)-2000;
+			CellAnno anno = new CellAnno(Colonna);
+			j = anno.getColonna();
 			}catch(NumberFormatException e) {
 				e.printStackTrace(); }			
 	}

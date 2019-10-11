@@ -5,15 +5,45 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import it.univpm.ProgettoOOP.data.SavedData;
+import it.univpm.ProgettoOOP.model.CellAnno;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 public class Filters {
-ArrayList<FisherAid> AiutiPesca = SavedData.getArrFisherAid();
+private static ArrayList<FisherAid> AiutiPesca;
+private static ArrayList<FisherAid> out;
+private int cella;
 
-//public Filters (ArrayList<FisherAid> AiutiPesca) {
-//	this.AiutiPesca = AiutiPesca;
-//}
+public Filters () {
+	out = new ArrayList<FisherAid>();
+	AiutiPesca = SavedData.getArrFisherAid();
+}
 
+public static boolean check (Object ValRif, String operator, Object val) {
+	return false;
+}
+
+public void ScorriAnni (String CampoRic, String operator, String val) {
+	if(!(out.isEmpty())) out.clear();
+	for (int i=0; i < SavedData.getArrFisherAid().size();i++) {
+		if(Filters.check(SavedData.getArrFisherAid().get(i).getAnno(cella, i), operator, val))
+			out.add(SavedData.getArrFisherAid().get(i));
+	}
+}
+
+public void ScorriStr (String CampoRic, String operator, String val) {
+	
+}
+
+
+public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+{
+	CellAnno anno = new CellAnno(CampoRic);
+	if(anno.CheckAnno())
+		ScorriAnni(String CampoRic, String operator, String val);
+	else ScorriStr(String CampoRic, String operator, String val);
+	return out;
+}
+/* *************************************************************************
 public static boolean check (Object ValRif, String operator, Object val) {
 	if(val instanceof String && ValRif instanceof String) {	//per le stringhe
 		switch (operator) {
