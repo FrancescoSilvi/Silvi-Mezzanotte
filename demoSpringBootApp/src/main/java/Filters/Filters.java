@@ -63,6 +63,7 @@ public void ScorriAnni (String CampoRic, String operator, String val) {
 }
 
 public void ScorriStr (String CampoRic, String operator, String val) {
+	if(!(out.isEmpty())) out.clear();
 	for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 		try {
 			Method m = indice.getClass().getMethod("get"+CampoRic.substring(0,1).toUpperCase()+CampoRic.substring(1), null);
