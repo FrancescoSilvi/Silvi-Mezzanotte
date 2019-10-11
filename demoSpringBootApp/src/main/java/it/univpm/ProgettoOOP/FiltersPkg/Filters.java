@@ -1,9 +1,10 @@
-package Filters;
+package it.univpm.ProgettoOOP.FiltersPkg;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import it.univpm.ProgettoOOP.data.SavedData;
+import it.univpm.ProgettoOOP.model.CellAnno;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 
