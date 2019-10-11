@@ -34,7 +34,7 @@ public class RestControllerClass
 		return SavedData.getArrMeta();
 	}
 	
-	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"attribute", "operator", "value"})
+	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"CampoRic", "operator", "val"})
 	public ArrayList<FisherAid> getData(@RequestParam String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 	
 		return new Filters().SelectOut(CampoRic, operator, val);

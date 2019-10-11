@@ -55,7 +55,7 @@ public static boolean check (Object ValRif, String operator, Object val) {
 
 
 public void ScorriAnni (String CampoRic, String operator, String val) {
-	if(!(out.isEmpty())) out.clear();
+//	if(!(out.isEmpty())) out.clear();
 	for (int i=0; i < SavedData.getArrFisherAid().size();i++) {
 		if(Filters.check(SavedData.getArrFisherAid().get(i).getAnno(cella, i), operator, val))
 			out.add(SavedData.getArrFisherAid().get(i));
@@ -63,7 +63,7 @@ public void ScorriAnni (String CampoRic, String operator, String val) {
 }
 
 public void ScorriStr (String CampoRic, String operator, String val) {
-	if(!(out.isEmpty())) out.clear();
+//	if(!(out.isEmpty())) out.clear();
 	for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 		try {
 			Method m = indice.getClass().getMethod("get"+CampoRic.substring(0,1).toUpperCase()+CampoRic.substring(1), null);
@@ -96,6 +96,7 @@ public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String 
 	if(anno.CheckAnno())
 		ScorriAnni(CampoRic, operator, val);
 	else ScorriStr(CampoRic, operator, val);
+	cella = anno.getColonna();
 	return out;
 }}
 /* *************************************************************************
