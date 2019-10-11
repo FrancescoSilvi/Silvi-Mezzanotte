@@ -18,7 +18,7 @@ private int cella;
 		AiutiPesca = SavedData.getArrFisherAid();
 	}
 	
-	public static boolean check (Object ValRif, String operator, Object val) {		System.out.print("sto facendo il check -> ");
+	public static boolean check (Object val, String operator, Object ValRif) {		System.out.print("sto facendo il check -> ");
 		if(val instanceof String && ValRif instanceof String) {	//per le stringhe
 																System.out.println("per stringa stringa");
 			switch (operator) {
@@ -31,8 +31,8 @@ private int cella;
 			}
 		}else if(val instanceof Number && ValRif instanceof Number) {	//per i numeri
 																System.out.println("per numero numero");
-			double val1 = ((Number) ValRif).doubleValue();
-			double val2 = ((Number) val).doubleValue();
+			double val1 = ((Number) val).doubleValue();
+			double val2 = ((Number) ValRif).doubleValue();
 			switch (operator) {
 			case "gt":	//>
 				if (val1 > val2) return true;
@@ -44,7 +44,7 @@ private int cella;
 				if (val1 < val2) return true;
 				return false;
 			case "lte":	//<=
-				if (val1 >= val2) return true;
+				if (val1 <= val2) return true;
 				return false;
 			case "in":	//==
 				if(val1 == val2) return true;
@@ -59,9 +59,9 @@ private int cella;
 	
 	
 	public void ScorriAnni (String CampoRic, String operator, String val) {			System.out.println("sono nel scorri anni");
-		//double AnnoRic = Double.parseDouble(CampoRic);
+		double ValRif = Double.parseDouble(val);
 		for (int i=0; i < SavedData.getArrFisherAid().size();i++) {
-			if(Filters.check(cella+2000, operator, SavedData.getArrFisherAid().get(i).getAnno(cella, i))) {
+			if(Filters.check(SavedData.getArrFisherAid().get(i).getAnno(cella, i), operator, ValRif )) {
 				out.add(SavedData.getArrFisherAid().get(i));						System.out.println("riempo out da scorri anni");}
 		}
 	}
@@ -98,10 +98,11 @@ private int cella;
 	public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 	{													System.out.println("sono nel slect out");
 		CellAnno anno = new CellAnno(CampoRic);
+		cella = anno.getColonna();	
 		if(anno.CheckAnno())
 			ScorriAnni(CampoRic, operator, val);
 		else ScorriStr(CampoRic, operator, val);
-		cella = anno.getColonna();						System.out.println("ritorno out");
+														System.out.println("ritorno out");
 		return out;
 	}
 }
