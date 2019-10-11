@@ -1,7 +1,5 @@
 package it.univpm.ProgettoOOP.model;
 
-import java.util.ArrayList;
-
 import it.univpm.ProgettoOOP.data.SavedData;
 
 public class FisherAid {

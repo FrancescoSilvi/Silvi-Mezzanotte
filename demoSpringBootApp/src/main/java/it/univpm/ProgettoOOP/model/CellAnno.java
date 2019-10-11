@@ -1,7 +1,6 @@
 package it.univpm.ProgettoOOP.model;
 
 public class CellAnno {
-private int NumCella;
 private String CampoRic;
 
 public CellAnno(String CampoRic) {

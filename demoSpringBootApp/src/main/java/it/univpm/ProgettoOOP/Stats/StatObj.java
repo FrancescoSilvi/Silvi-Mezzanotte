@@ -8,7 +8,7 @@ public class StatObj {
 	private float min;
 	private float devst;
 	
-public StatObj (float cont, float sum, float agv, float max, float min, float devst) {
+public StatObj (float count, float sum, float agv, float max, float min, float devst) {
 	this.count = count;
 	this.sum = sum;
 	this.agv = agv;
