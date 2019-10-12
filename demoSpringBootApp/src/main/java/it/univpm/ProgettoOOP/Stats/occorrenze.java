@@ -1,7 +1,31 @@
 package it.univpm.ProgettoOOP.Stats;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import it.univpm.ProgettoOOP.FiltersPkg.Filters;
+import it.univpm.ProgettoOOP.model.FisherAid;
+
 public class occorrenze {
-	private int rip;
+	 HashMap<String, Integer> StringRip;
+	 ArrayList<FisherAid> afa;
 	
+	public occorrenze(ArrayList<FisherAid> arrFA) {
+		this.afa = arrFA;
+	}
+	
+	
+	public HashMap<String, Integer> NumRip(String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException
+	{
+		for(FisherAid FA : afa) {
+			Method m = FA.getClass().getMethod("get" + CampoRic.substring(0, 1).toUpperCase()+CampoRic.substring(1), null);
+			if (StringRip.containsKey( m.invoke(FA) )) { 
+				StringRip.put((String) m.invoke(FA), StringRip.get((String) m.invoke(FA)) + 1);
+			}else StringRip.put((String) m.invoke(FA),1);
+		}
+		return StringRip;
+	}
 	
 }

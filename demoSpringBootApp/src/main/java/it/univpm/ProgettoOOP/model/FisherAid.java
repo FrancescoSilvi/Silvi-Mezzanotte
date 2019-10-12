@@ -1,6 +1,5 @@
 package it.univpm.ProgettoOOP.model;
 
-import it.univpm.ProgettoOOP.data.SavedData;
 
 public class FisherAid {
 	

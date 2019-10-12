@@ -3,6 +3,7 @@ package it.univpm.ProgettoOOP.controller;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import it.univpm.ProgettoOOP.FiltersPkg.Filters;
 import it.univpm.ProgettoOOP.Stats.StatObj;
 import it.univpm.ProgettoOOP.Stats.StatsCalc;
+import it.univpm.ProgettoOOP.Stats.occorrenze;
 import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
@@ -56,10 +58,17 @@ public class RestControllerClass
 		StatsCalc sc = new StatsCalc(new Filters().SelectOut(CampoRic, operator, val), anno);
 		return sc.stats();
 		}
-	/*
-	@RequestMapping(value = "/occorrence", method = RequestMethod.GET)
-	public HashMap<String, Integer> getOccorrence(@RequestParam String attribute) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	
+	@RequestMapping(value = "/occ", method = RequestMethod.GET)
+	public HashMap<String, Integer> getOcc(@RequestParam String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		
-			return new compString(attribute).stringOccorrence();
-		}*/
+			return new occorrenze(SavedData.getArrFisherAid()).NumRip(CampoRic);
+		}
+	
+	@RequestMapping(value = "/occ", method = RequestMethod.GET, params = {"Colonna", "CampoRic", "operator", "val"})
+	public HashMap<String, Integer> getOcc(@RequestParam String Colonna, String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		
+			return new occorrenze(new Filters().SelectOut(CampoRic, operator, val)).NumRip(Colonna);
+		}
+	
 }
