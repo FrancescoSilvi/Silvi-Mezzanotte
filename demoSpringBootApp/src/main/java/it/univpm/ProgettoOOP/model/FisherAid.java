@@ -35,12 +35,6 @@ public class FisherAid {
 		return Anni;
 	}
 	
- 
-	public float getAnno(int j, int i) {
-		float[] Anni = SavedData.getArrFisherAid().get(i).getAnni();
-		return Anni[j];
-	}
-	
 
 
 }

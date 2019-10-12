@@ -61,7 +61,7 @@ private int cella;
 	public void ScorriAnni (String CampoRic, String operator, String val) {			System.out.println("sono nel scorri anni");
 		double ValRif = Double.parseDouble(val);
 		for (int i=0; i < SavedData.getArrFisherAid().size();i++) {
-			if(Filters.check(SavedData.getArrFisherAid().get(i).getAnno(cella, i), operator, ValRif )) {
+			if(Filters.check(SavedData.getArrFisherAid().get(i).getAnni()[cella], operator, ValRif )) {
 				out.add(SavedData.getArrFisherAid().get(i));						System.out.println("riempo out da scorri anni");}
 		}
 	}

@@ -22,14 +22,14 @@ public class StatsCalc {
 	public int Count() {
 		int num = 0;
 		for(int i = 0; i < afa.size(); i++)
-			if(afa.get(i).getAnno(j, i) >= 0) num++;
+			if(afa.get(i).getAnni()[j] >= 0) num++;
 		return num;
 	}
 	
 	public float Sum () {
 		float sum = 0;
-		for(int i = 0; i < afa.size(); i++)
-			sum += afa.get(i).getAnno(j, i);
+		for(int i = 0; i < afa.size(); i++) 
+			sum += afa.get(i).getAnni()[j];	
 		return sum;
 	}
 
@@ -40,16 +40,16 @@ public class StatsCalc {
 	public float Max() {
 		float max = 0;
 		for(int i = 0; i < afa.size(); i++)
-			if (max < afa.get(i).getAnno(j, i))
-				max = afa.get(i).getAnno(j, i);
+			if (max < afa.get(i).getAnni()[j])
+				max = afa.get(i).getAnni()[j];
 		return max;
 	}
 	
 	public float Min() {
 		float min = 0;
 		for(int i = 0; i < afa.size(); i++)
-			if (min > afa.get(i).getAnno(j, i))
-				min = afa.get(i).getAnno(j, i);
+			if (min > afa.get(i).getAnni()[j])
+				min = afa.get(i).getAnni()[j];
 		return min;
 	}
 
@@ -58,11 +58,11 @@ public class StatsCalc {
 	float media = Avg();
 	float num = Count();
 	for(int i = 0; i < Count(); i++)
-		devst2 += (afa.get(i).getAnno(j, i)-media)/num;
+		devst2 += Math.pow((afa.get(i).getAnni()[j]-media),2)/num;
 	return (float)Math.sqrt(devst2);		
 	}
 	
-	public  ArrayList<StatObj> stats (ArrayList<FisherAid> fas){
+	public  ArrayList<StatObj> stats (){
 		arrStats = new ArrayList<StatObj>();
 		arrStats.add(new StatObj(Count(), Sum(), Avg(), Max(), Min(), DevSt()));
 		return arrStats;

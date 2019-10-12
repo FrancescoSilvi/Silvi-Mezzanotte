@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.univpm.ProgettoOOP.FiltersPkg.Filters;
+import it.univpm.ProgettoOOP.Stats.StatObj;
+import it.univpm.ProgettoOOP.Stats.StatsCalc;
 import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
@@ -41,4 +43,23 @@ public class RestControllerClass
 		return new Filters().SelectOut(CampoRic, operator, val);
 	}
 	
+	@RequestMapping(value = "/stats", method = RequestMethod.GET)
+	public ArrayList<StatObj> getStats(@RequestParam String anno) {
+			
+		StatsCalc sc = new StatsCalc(SavedData.getArrFisherAid(), anno);
+		return sc.stats();
+		}
+	
+	@RequestMapping(value = "/stats", method = RequestMethod.GET, params = {"anno", "CampoRic", "operator", "val"})
+	public ArrayList<StatObj> getStats(@RequestParam String anno, String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+			
+		StatsCalc sc = new StatsCalc(new Filters().SelectOut(CampoRic, operator, val), anno);
+		return sc.stats();
+		}
+	/*
+	@RequestMapping(value = "/occorrence", method = RequestMethod.GET)
+	public HashMap<String, Integer> getOccorrence(@RequestParam String attribute) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		
+			return new compString(attribute).stringOccorrence();
+		}*/
 }
