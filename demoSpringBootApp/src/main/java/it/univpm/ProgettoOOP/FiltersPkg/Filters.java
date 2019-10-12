@@ -9,14 +9,18 @@ import it.univpm.ProgettoOOP.model.FisherAid;
 
 
 public class Filters {
-private static ArrayList<FisherAid> AiutiPesca;
-private static ArrayList<FisherAid> out;
-private int cella;
-//aggiungere filtro unita di misura!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	private static ArrayList<FisherAid> AiutiPesca;
+	private static ArrayList<FisherAid> out;
+	private int cella;
+
 	public Filters () {
 		out = new ArrayList<FisherAid>();
 		AiutiPesca = SavedData.getArrFisherAid();
 	}
+	 public Filters(ArrayList<FisherAid> fafa) {
+		 out = new ArrayList<FisherAid>();
+		 AiutiPesca = fafa;
+	 }
 	
 	public static boolean check (Object val, String operator, Object ValRif) {	
 		if(val instanceof String && ValRif instanceof String) {	//per le stringhe
@@ -58,9 +62,9 @@ private int cella;
 	
 	public void ScorriAnni (String CampoRic, String operator, String val) {			
 		double ValRif = Double.parseDouble(val);
-		for (int i=0; i < SavedData.getArrFisherAid().size();i++) {
-			if(Filters.check(SavedData.getArrFisherAid().get(i).getAnni()[cella], operator, ValRif )) 
-				out.add(SavedData.getArrFisherAid().get(i));
+		for (int i=0; i < AiutiPesca.size();i++) {
+			if(Filters.check(AiutiPesca.get(i).getAnni()[cella], operator, ValRif )) 
+				out.add(AiutiPesca.get(i));
 		}
 	}
 	
