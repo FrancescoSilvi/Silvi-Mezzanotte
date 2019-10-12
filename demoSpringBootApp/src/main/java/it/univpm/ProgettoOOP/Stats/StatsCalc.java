@@ -26,40 +26,40 @@ public class StatsCalc {
 		return num;
 	}
 	
-	public float Sum () {
-		float sum = 0;
+	public double Sum () {
+		double sum = 0;
 		for(int i = 0; i < afa.size(); i++) 
 			sum += afa.get(i).getAnni()[j];	
 		return sum;
 	}
 
-	public float Avg() {
+	public double Avg() {
 		return Sum()/Count();
 	}	
 
-	public float Max() {
-		float max = 0;
+	public double Max() {
+		double max = 0;
 		for(int i = 0; i < afa.size(); i++)
 			if (max < afa.get(i).getAnni()[j])
 				max = afa.get(i).getAnni()[j];
 		return max;
 	}
 	
-	public float Min() {
-		float min = 0;
+	public double Min() {
+		double min = 0;
 		for(int i = 0; i < afa.size(); i++)
 			if (min > afa.get(i).getAnni()[j])
 				min = afa.get(i).getAnni()[j];
 		return min;
 	}
 
-	public float DevSt() {
-	float devst2 = 0;
-	float media = Avg();
-	float num = Count();
+	public double DevSt() {
+	double devst2 = 0;
+	double media = Avg();
+	double num = Count();
 	for(int i = 0; i < Count(); i++)
 		devst2 += Math.pow((afa.get(i).getAnni()[j]-media),2)/num;
-	return (float)Math.sqrt(devst2);		
+	return Math.sqrt(devst2);		
 	}
 	
 	public  ArrayList<StatObj> stats (){

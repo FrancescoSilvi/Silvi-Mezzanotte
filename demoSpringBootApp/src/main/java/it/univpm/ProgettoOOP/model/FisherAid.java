@@ -6,9 +6,9 @@ public class FisherAid {
 	private String Freq;
 	private String Geo;
 	private String Unit;
-	private float[] Anni;
+	private double[] Anni;
 	
-	public FisherAid(String Freq, String Geo, String Unit, float[] Anni)
+	public FisherAid(String Freq, String Geo, String Unit, double[] Anni)
 	{
 		this.Freq = Freq;
 		this.Geo = Geo;
@@ -30,7 +30,7 @@ public class FisherAid {
 	}
 
 
-	public float[] getAnni() {
+	public double[] getAnni() {
 		return Anni;
 	}
 	

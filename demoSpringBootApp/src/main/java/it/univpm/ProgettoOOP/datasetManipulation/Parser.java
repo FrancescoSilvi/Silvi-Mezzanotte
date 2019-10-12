@@ -35,24 +35,24 @@ public class Parser
         {
 			line = str.split("[;,]");
         	afa.add(new FisherAid(line[0], line[1], line[2], 
-        			new float[] {Float.parseFloat(line[3]),
-        						 Float.parseFloat(line[4]),
-        						 Float.parseFloat(line[5]),
-        						 Float.parseFloat(line[6]),
-        						 Float.parseFloat(line[7]),
-        						 Float.parseFloat(line[8]),
-        						 Float.parseFloat(line[9]),
-        						 Float.parseFloat(line[10]),
-        						 Float.parseFloat(line[11]),
-        						 Float.parseFloat(line[12]),
-        		        		 Float.parseFloat(line[13]),
-        		        		 Float.parseFloat(line[14]),
-        		        		 Float.parseFloat(line[15]),
-        						 Float.parseFloat(line[16]),
-								 Float.parseFloat(line[17]),
-        						 Float.parseFloat(line[18]),
-								 Float.parseFloat(line[19]),
-        						 Float.parseFloat(line[20])}));
+        			new double[] {Double.parseDouble(line[3]),
+        						 Double.parseDouble(line[4]),
+        						 Double.parseDouble(line[5]),
+        						 Double.parseDouble(line[6]),
+        						 Double.parseDouble(line[7]),
+        						 Double.parseDouble(line[8]),
+        						 Double.parseDouble(line[9]),
+        						 Double.parseDouble(line[10]),
+        						 Double.parseDouble(line[11]),
+        						 Double.parseDouble(line[12]),
+        		        		 Double.parseDouble(line[13]),
+        		        		 Double.parseDouble(line[14]),
+        		        		 Double.parseDouble(line[15]),
+        						 Double.parseDouble(line[16]),
+								 Double.parseDouble(line[17]),
+        						 Double.parseDouble(line[18]),
+								 Double.parseDouble(line[19]),
+        						 Double.parseDouble(line[20])}));
         }
 
         csvReader.close();

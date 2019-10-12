@@ -24,24 +24,24 @@ public class SavedData
 		arrMeta.add(new Metadata("Freq", "Frequenza", "string"));
 		arrMeta.add(new Metadata("Geo", "Paese", "string"));
 		arrMeta.add(new Metadata("Unit", "Unità", "string"));
-		arrMeta.add(new Metadata("2000", "2000", "float"));
-		arrMeta.add(new Metadata("2001", "2001", "float"));
-		arrMeta.add(new Metadata("2002", "2002", "float"));
-		arrMeta.add(new Metadata("2003", "2003", "float"));
-		arrMeta.add(new Metadata("2004", "2004", "float"));
-		arrMeta.add(new Metadata("2005", "2005", "float"));
-		arrMeta.add(new Metadata("2006", "2006", "float"));
-		arrMeta.add(new Metadata("2007", "2007", "float"));
-		arrMeta.add(new Metadata("2008", "2008", "float"));
-		arrMeta.add(new Metadata("2009", "2009", "float"));
-		arrMeta.add(new Metadata("2010", "2010", "float"));
-		arrMeta.add(new Metadata("2011", "2011", "float"));
-		arrMeta.add(new Metadata("2012", "2012", "float"));
-		arrMeta.add(new Metadata("2013", "2013", "float"));
-		arrMeta.add(new Metadata("2014", "2014", "float"));
-		arrMeta.add(new Metadata("2015", "2015", "float"));
-		arrMeta.add(new Metadata("2016", "2016", "float"));
-		arrMeta.add(new Metadata("2017", "2017", "float"));
+		arrMeta.add(new Metadata("2000", "2000", "double"));
+		arrMeta.add(new Metadata("2001", "2001", "double"));
+		arrMeta.add(new Metadata("2002", "2002", "double"));
+		arrMeta.add(new Metadata("2003", "2003", "double"));
+		arrMeta.add(new Metadata("2004", "2004", "double"));
+		arrMeta.add(new Metadata("2005", "2005", "double"));
+		arrMeta.add(new Metadata("2006", "2006", "double"));
+		arrMeta.add(new Metadata("2007", "2007", "double"));
+		arrMeta.add(new Metadata("2008", "2008", "double"));
+		arrMeta.add(new Metadata("2009", "2009", "double"));
+		arrMeta.add(new Metadata("2010", "2010", "double"));
+		arrMeta.add(new Metadata("2011", "2011", "double"));
+		arrMeta.add(new Metadata("2012", "2012", "double"));
+		arrMeta.add(new Metadata("2013", "2013", "double"));
+		arrMeta.add(new Metadata("2014", "2014", "double"));
+		arrMeta.add(new Metadata("2015", "2015", "double"));
+		arrMeta.add(new Metadata("2016", "2016", "double"));
+		arrMeta.add(new Metadata("2017", "2017", "double"));
 	}
 	
 	public static ArrayList<FisherAid> getArrFisherAid() {

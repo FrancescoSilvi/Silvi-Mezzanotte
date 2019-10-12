@@ -1,14 +1,14 @@
 package it.univpm.ProgettoOOP.Stats;
 
 public class StatObj {
-	private float count;
-	private float sum;
-	private float agv;
-	private float max;
-	private float min;
-	private float devst;
+	private double count;
+	private double sum;
+	private double agv;
+	private double max;
+	private double min;
+	private double devst;
 	
-public StatObj (float count, float sum, float agv, float max, float min, float devst) {
+public StatObj (double count, double sum, double agv, double max, double min, double devst) {
 	this.count = count;
 	this.sum = sum;
 	this.agv = agv;
@@ -16,51 +16,51 @@ public StatObj (float count, float sum, float agv, float max, float min, float d
 	this.min = min;
 	this.devst = devst;
 }
-	public float getCount() {
+	public double getCount() {
 		return count;
 	}
 
-	public void setCount(float count) {
+	public void setCount(double count) {
 		this.count = count;
 	}
 
-	public float getSum() {
+	public double getSum() {
 		return sum;
 	}
 
-	public void setSum(float sum) {
+	public void setSum(double sum) {
 		this.sum = sum;
 	}
 
-	public float getAgv() {
+	public double getAgv() {
 		return agv;
 	}
 
-	public void setAgv(float agv) {
+	public void setAgv(double agv) {
 		this.agv = agv;
 	}
 
-	public float getMax() {
+	public double getMax() {
 		return max;
 	}
 
-	public void setMax(float max) {
+	public void setMax(double max) {
 		this.max = max;
 	}
 
-	public float getMin() {
+	public double getMin() {
 		return min;
 	}
 
-	public void setMin(float min) {
+	public void setMin(double min) {
 		this.min = min;
 	}
 
-	public float getDevst() {
+	public double getDevst() {
 		return devst;
 	}
 
-	public void setDevst(float devst) {
+	public void setDevst(double devst) {
 		this.devst = devst;
 	}
 
