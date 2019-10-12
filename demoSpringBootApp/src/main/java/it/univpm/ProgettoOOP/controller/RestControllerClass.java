@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,8 +61,8 @@ public class RestControllerClass
 		}
 	
 	@RequestMapping(value = "/occ", method = RequestMethod.GET)
-	public HashMap<String, Integer> getOcc(@RequestParam String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		
+	public HashMap<String, Integer> getOcc(@RequestParam String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+		{	
 			return new occorrenze(SavedData.getArrFisherAid()).NumRip(CampoRic);
 		}
 	
