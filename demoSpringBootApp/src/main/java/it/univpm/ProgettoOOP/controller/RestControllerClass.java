@@ -31,9 +31,15 @@ public class RestControllerClass
 	{
 		return SavedData.getArrFisherAid();
 	}
-	/**
-	 * Restituisce la lista dei metadati
-	 */
+	
+	@RequestMapping(value = "/data", method = RequestMethod.GET)
+	public ArrayList<FisherAid> getData(@RequestParam String unità) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	{
+		if(unità.equals("%")) unità = "PC_GDP";
+		else if (unità.equals("€")) unità = "MEUR_KP_PRE";
+		return new Filters().SelectOut("unit", "in", unità);
+	}
+	
 	@GetMapping("/metadata")
 	public ArrayList<Metadata> stampaMeta()
 	{
@@ -74,9 +80,9 @@ public class RestControllerClass
 		}
 	
 	@RequestMapping(value = "/occ", method = RequestMethod.GET)
-	public HashMap<String, Integer> getOcc(@RequestParam String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	public HashMap<String, Integer> getOcc(@RequestParam String Colonna) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 		{	
-			return new occorrenze(SavedData.getArrFisherAid()).NumRip(CampoRic);
+			return new occorrenze(SavedData.getArrFisherAid()).NumRip(Colonna);
 		}
 	
 	@RequestMapping(value = "/occ", method = RequestMethod.GET, params = {"Colonna", "CampoRic", "operator", "val"})
