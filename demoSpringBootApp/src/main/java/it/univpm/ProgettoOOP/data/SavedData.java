@@ -3,12 +3,10 @@ package it.univpm.ProgettoOOP.data;
 import java.util.ArrayList;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
-/**
- * Classe contenente gli oggetti che servono a memorizzare dati e metadati
- */
+
 public class SavedData
 {
-	private static ArrayList<FisherAid> arrFisherAid = new ArrayList<FisherAid>();
+	private static ArrayList<FisherAid> arrFisherAid = new ArrayList<FisherAid>();	//arraylist nel quale saranno contenuti i dati
 
 	public static void setArrFisherAid(ArrayList<FisherAid> arrFisherAid) {
 		SavedData.arrFisherAid = arrFisherAid;
@@ -16,6 +14,7 @@ public class SavedData
 
 	private static ArrayList<Metadata> arrMeta = new ArrayList<Metadata>();
 	
+	//nel costruttore vengono formate le caratteristiche delle colonne
 	public SavedData()
 	{
 		arrFisherAid = new ArrayList<FisherAid>();
@@ -44,10 +43,12 @@ public class SavedData
 		arrMeta.add(new Metadata("2017", "2017", "double"));
 	}
 	
-	public static ArrayList<FisherAid> getArrFisherAid() {
+	//metodo che serve per ottenere i dati salvati
+	public static ArrayList<FisherAid> getArrFisherAid() {	
 		return arrFisherAid;
 	}
 	
+	//metodo che serve per ottenere i metadati
 	public static ArrayList<Metadata> getArrMeta() {
 		return arrMeta;
 	}

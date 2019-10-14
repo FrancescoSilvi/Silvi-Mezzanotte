@@ -11,17 +11,32 @@ import it.univpm.ProgettoOOP.model.FisherAid;
 public class Filters {
 	private static ArrayList<FisherAid> AiutiPesca;
 	private static ArrayList<FisherAid> out;
-	private int cella;
-
+	private int position;
+	
+	/**
+	 * Primo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
+	 * e fornisce ai filtri l'intera lista di oggetti
+	 */
+	
 	public Filters () {
 		out = new ArrayList<FisherAid>();
 		AiutiPesca = SavedData.getArrFisherAid();
 	}
+	
+	/**
+	 * Secondo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
+	 * e fornisce ai filtri una lista di oggetti già filtrati
+	 */
+	
 	 public Filters(ArrayList<FisherAid> fafa) {
 		 out = new ArrayList<FisherAid>();
 		 AiutiPesca = fafa;
 	 }
-	
+
+	 /**
+	 * Metodo che esegue il confronto fra due valori, in base a se sonon stringa o numerici e all'operatore
+	 */
+	 
 	public static boolean check (Object val, String operator, Object ValRif) {	
 		if(val instanceof String && ValRif instanceof String) {	//per le stringhe
 			switch (operator) {
@@ -59,17 +74,24 @@ public class Filters {
 		return false;
 	}
 	
+	/**
+	 * Metodo che scorre i valori numerici e dunque esegue le opportune operazionni di casting
+	 * e chiama volta per volta il check
+	 */
 	
 	public void ScorriAnni (String CampoRic, String operator, String val) {			
 		double ValRif = Double.parseDouble(val);
 		for (int i=0; i < AiutiPesca.size();i++) {
-			if(Filters.check(AiutiPesca.get(i).getAnni()[cella], operator, ValRif )) 
+			if(Filters.check(AiutiPesca.get(i).getAnni()[position], operator, ValRif )) 
 				out.add(AiutiPesca.get(i));
 		}
 	}
 	
+	/**
+	 * Metodo che scorre i valori di tipo stringa e chiama volta per volta il check
+	 */	
+	
 	public void ScorriStr (String CampoRic, String operator, String val) {
-	//	if(!(out.isEmpty())) out.clear();
 		for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 			try {
 				Method m = indice.getClass().getMethod("get"+CampoRic.substring(0,1).toUpperCase()+CampoRic.substring(1), null);
@@ -95,14 +117,18 @@ public class Filters {
 	
 	}
 	
+	/**
+	 * Il metodo SelectOut riceve i parametri del filtro e seleziona quale metodo
+	 * della sua stessa classe andare ad utilizzare in base al tipo di dati ricevuti
+	 */
 	
 	public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 	{
 		CellAnno anno = new CellAnno(CampoRic);
-		cella = anno.getColonna();	
-		if(anno.CheckAnno())
+		if(anno.CheckAnno()) {							//si verifica se si crca in una colonna anno o in una colonna stringa
+			position = anno.getColonna();				//si prende il numero della cella dell'anno che si sta esaminando
 			ScorriAnni(CampoRic, operator, val);
-		else ScorriStr(CampoRic, operator, val);
+		}else ScorriStr(CampoRic, operator, val);
 		return out;
 	}
 }

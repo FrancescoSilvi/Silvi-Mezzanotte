@@ -1,6 +1,6 @@
 package it.univpm.ProgettoOOP.model;
 
-
+// classe "scheleto" degli oggetti che rappresentano le righe della tabella
 public class FisherAid {
 	
 	private String Freq;

@@ -17,8 +17,7 @@ public class DatasetHandler
 	private URL link;
 	private BufferedReader in;
 	/**
-	 * Costruttore che copia il contenuto dell'URL e lo memorizza in una variabile di tipo String
-	 * @param url l'indirizzo web nel quale Ã¨ contenuto il link al dataset
+	 * Nel costruttore il contenuto dell'URL è copiato e memorizzato in una variabile
 	 */
 	public DatasetHandler(String url) throws MalformedURLException, IOException
 	{
@@ -33,9 +32,10 @@ public class DatasetHandler
 	    }
 	    in.close();
 	}
+	
 	/**
 	 * Converte la stringa precedentemente salvata in un oggetto di tipo JSON per poi andare a localizzare la posizione dell'URL del dataset.
-	 * DopodichÃ© legge il contenuto dell'URL e ne effettua una copia salvata su un file in locale
+	 * Dopodiché legge il contenuto dell'URL e ne effettua una copia salvata su un file in locale
 	 */
 	public boolean downloadCSV() throws MalformedURLException, IOException, JSONException
 	{

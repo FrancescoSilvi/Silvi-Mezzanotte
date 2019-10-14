@@ -3,15 +3,12 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.Buffer;
 import java.util.ArrayList;
-
 import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 public class Parser
 {
-	private FileReader reader;
 	private String dataset, str;
 	private String[] line;
 	private BufferedReader csvReader;
@@ -23,13 +20,13 @@ public class Parser
 		this.afa = SavedData.getArrFisherAid();		//l'array è stato popolato
 	}
 	/**
-	 * Memorizza le informazioni del dataset in un Arraylist di oggetti
+	 * Parser salva i dati scaricati in un'arraylist di oggetti
 	 */
 	public void parse() throws FileNotFoundException, IOException, NullPointerException, NumberFormatException
 	{
 		
 		csvReader = new BufferedReader(new FileReader(dataset));
-		csvReader.readLine();       
+		csvReader.readLine();       //viene saltata la prima riga
 		
 		while ((str = csvReader.readLine()) != null)
         {
