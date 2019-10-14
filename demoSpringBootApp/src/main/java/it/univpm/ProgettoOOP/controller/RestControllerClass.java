@@ -31,9 +31,7 @@ public class RestControllerClass
 	{
 		return SavedData.getArrFisherAid();
 	}
-	/**
-	 * Restituisce la lista dei metadati
-	 */
+	
 	@GetMapping("/metadata")
 	public ArrayList<Metadata> stampaMeta()
 	{
@@ -41,13 +39,14 @@ public class RestControllerClass
 	}
 	
 	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"CampoRic", "operator", "val"})
-	public ArrayList<FisherAid> getData(@RequestParam String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-	
+	public ArrayList<FisherAid> getData(@RequestParam String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	{
 		return new Filters().SelectOut(CampoRic, operator, val);
 	}
 	
 	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"unità", "CampoRic", "operator", "val"})
-	public ArrayList<FisherAid> getData(@RequestParam String unità, String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public ArrayList<FisherAid> getData(@RequestParam String unità, String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	{
 		if(unità.equals("%")) unità = "PC_GDP";
 		else if (unità.equals("€")) unità = "MEUR_KP_PRE";
 		ArrayList<FisherAid> FirstFilter = new Filters().SelectOut("unit", "in", unità);
@@ -74,9 +73,9 @@ public class RestControllerClass
 		}
 	
 	@RequestMapping(value = "/occ", method = RequestMethod.GET)
-	public HashMap<String, Integer> getOcc(@RequestParam String CampoRic) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	public HashMap<String, Integer> getOcc(@RequestParam String Colonna) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 		{	
-			return new occorrenze(SavedData.getArrFisherAid()).NumRip(CampoRic);
+			return new occorrenze(SavedData.getArrFisherAid()).NumRip(Colonna);
 		}
 	
 	@RequestMapping(value = "/occ", method = RequestMethod.GET, params = {"Colonna", "CampoRic", "operator", "val"})
