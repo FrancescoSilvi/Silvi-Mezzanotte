@@ -10,6 +10,8 @@ public class StatsCalc {
 	private ArrayList<FisherAid> afa;
 	private int j;
 	
+	/**Nel costruttore si riceve l'array list su quale lavorare
+	 * e la colonna sulla quale calcolare le statistiche */
 	public StatsCalc (ArrayList<FisherAid> afa, String Colonna) {
 		try{
 			this.afa = afa;
@@ -19,6 +21,7 @@ public class StatsCalc {
 				e.printStackTrace(); }			
 	}
 	
+	//conta le righe presenti
 	public int Count() {
 		int num = 0;
 		for(int i = 0; i < afa.size(); i++)
@@ -26,6 +29,7 @@ public class StatsCalc {
 		return num;
 	}
 	
+	//calcola la somma
 	public double Sum () {
 		double sum = 0;
 		for(int i = 0; i < afa.size(); i++) 
@@ -33,10 +37,12 @@ public class StatsCalc {
 		return sum;
 	}
 
+	//calcola la media
 	public double Avg() {
 		return Sum()/Count();
 	}	
 
+	//trova il massimo
 	public double Max() {
 		double max = 0;
 		for(int i = 0; i < afa.size(); i++)
@@ -45,6 +51,7 @@ public class StatsCalc {
 		return max;
 	}
 	
+	//trova il minimo
 	public double Min() {
 		double min = 0;
 		for(int i = 0; i < afa.size(); i++)
@@ -53,6 +60,7 @@ public class StatsCalc {
 		return min;
 	}
 
+	//calcola la deviazione standard
 	public double DevSt() {
 	double devst2 = 0;
 	double media = Avg();
@@ -62,6 +70,7 @@ public class StatsCalc {
 	return Math.sqrt(devst2);		
 	}
 	
+	//forma un arraylist di oggetti StatObj e lo popola con i risultati, poi restituisce l'arraylist
 	public  ArrayList<StatObj> stats (){
 		arrStats = new ArrayList<StatObj>();
 		arrStats.add(new StatObj(Count(), Sum(), Avg(), Max(), Min(), DevSt()));
