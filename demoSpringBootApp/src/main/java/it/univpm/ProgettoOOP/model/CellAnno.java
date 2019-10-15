@@ -7,7 +7,8 @@ public CellAnno(String CampoRic) {
 	this.CampoRic = CampoRic;
 }
 
- public boolean CheckAnno() {		//verifica binaria se la stringa passata corrisponde ad un anno
+/**verifica binaria se la stringa passata corrisponde ad un anno*/
+ public boolean CheckAnno() {
 	 switch (CampoRic) {
 	 case "2000": return true;
 	 case "2001": return true;
@@ -31,7 +32,8 @@ public CellAnno(String CampoRic) {
 	 }
  }
  
- public int getColonna () {			//restituisce il valore della cella relativa all'anno
+ /**restituisce il valore della cella relativa all'anno*/
+ public int getColonna () {	
 	 switch (CampoRic) {
 	 case "2000": return 0;
 	 case "2001": return 1;

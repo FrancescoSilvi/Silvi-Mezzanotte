@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"it.univpm.demoSpringBootApp"},{"l":"it.univpm.ProgettoOOP"},{"l":"it.univpm.ProgettoOOP.controller"},{"l":"it.univpm.ProgettoOOP.data"},{"l":"it.univpm.ProgettoOOP.datasetManipulation"},{"l":"it.univpm.ProgettoOOP.FiltersPkg"},{"l":"it.univpm.ProgettoOOP.model"},{"l":"it.univpm.ProgettoOOP.Stats"}]

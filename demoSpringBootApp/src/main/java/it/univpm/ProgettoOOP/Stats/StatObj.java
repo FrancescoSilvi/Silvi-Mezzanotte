@@ -1,5 +1,6 @@
 package it.univpm.ProgettoOOP.Stats;
 
+/**classe scheletro che contiene i risultati delle statistiche*/
 public class StatObj {
 	private double count;
 	private double sum;

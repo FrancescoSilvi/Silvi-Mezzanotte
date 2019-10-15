@@ -48,34 +48,34 @@ public class RestControllerClass
 	/**
 	 * Restituisce la lista dei dati in % o di quelli in € filtrati in base ai valori acquisiti
 	 */
-	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"unità", "CampoRic", "operator", "val"})
-	public ArrayList<FisherAid> getData(@RequestParam String unità, String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	@RequestMapping(value = "/data", method = RequestMethod.GET, params = {"unita", "CampoRic", "operator", "val"})
+	public ArrayList<FisherAid> getData(@RequestParam String unita, String CampoRic, String operator, String val) throws IOException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 	{
-		if(unità.equals("%")) unità = "PC_GDP";
-		else if (unità.equals("€")) unità = "MEUR_KP_PRE";
-		ArrayList<FisherAid> FirstFilter = new Filters().SelectOut("unit", "in", unità);
+		if(unita.equals("%")) unita = "PC_GDP";
+		else if (unita.equals("€")) unita = "MEUR_KP_PRE";
+		ArrayList<FisherAid> FirstFilter = new Filters().SelectOut("unit", "in", unita);
 		return new Filters(FirstFilter).SelectOut(CampoRic, operator, val);
 	}
 	/**
 	 * Restituisce le statistiche dei dati in % o di quelli in € calcolate sull'anno richiesto
 	 */
-	@RequestMapping(value = "/stats", method = RequestMethod.GET, params = {"unità", "anno"})
-	public ArrayList<StatObj> getStats(@RequestParam String unità, String anno) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	@RequestMapping(value = "/stats", method = RequestMethod.GET, params = {"unita", "anno"})
+	public ArrayList<StatObj> getStats(@RequestParam String unita, String anno) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 		{
-		if(unità.equals("%")) unità = "PC_GDP";
-		else if (unità.equals("€")) unità = "MEUR_KP_PRE";
-		StatsCalc sc = new StatsCalc(new Filters().SelectOut("unit", "in", unità), anno);
+		if(unita.equals("%")) unita = "PC_GDP";
+		else if (unita.equals("€")) unita = "MEUR_KP_PRE";
+		StatsCalc sc = new StatsCalc(new Filters().SelectOut("unit", "in", unita), anno);
 		return sc.stats();
 		}
 	/**
 	 * Restituisce le statistiche dei dati in % o di quelli in € calcolate sull'anno richiesto e filtrate secondo i valori acquisiti
 	 */
-	@RequestMapping(value = "/stats", method = RequestMethod.GET, params = {"unità", "anno", "CampoRic", "operator", "val"})
-	public ArrayList<StatObj> getStats(@RequestParam String unità, String anno, String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
+	@RequestMapping(value = "/stats", method = RequestMethod.GET, params = {"unita", "anno", "CampoRic", "operator", "val"})
+	public ArrayList<StatObj> getStats(@RequestParam String unita, String anno, String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 		{
-		if(unità.equals("%")) unità = "PC_GDP";
-		else if (unità.equals("€")) unità = "MEUR_KP_PRE";
-		ArrayList<FisherAid> FirstFilter = new Filters().SelectOut("unit", "in", unità);
+		if(unita.equals("%")) unita = "PC_GDP";
+		else if (unita.equals("€")) unita = "MEUR_KP_PRE";
+		ArrayList<FisherAid> FirstFilter = new Filters().SelectOut("unit", "in", unita);
 		StatsCalc sc = new StatsCalc(new Filters(FirstFilter).SelectOut(CampoRic, operator, val), anno);
 		return sc.stats();
 		}

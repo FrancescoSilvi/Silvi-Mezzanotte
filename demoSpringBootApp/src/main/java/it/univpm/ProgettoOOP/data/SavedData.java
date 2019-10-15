@@ -14,7 +14,7 @@ public class SavedData
 
 	private static ArrayList<Metadata> arrMeta = new ArrayList<Metadata>();
 	
-	//nel costruttore vengono formate le caratteristiche delle colonne
+	/**nel costruttore vengono formate le caratteristiche delle colonne*/
 	public SavedData()
 	{
 		arrFisherAid = new ArrayList<FisherAid>();
@@ -22,7 +22,7 @@ public class SavedData
 		
 		arrMeta.add(new Metadata("Freq", "Frequenza", "string"));
 		arrMeta.add(new Metadata("Geo", "Paese", "string"));
-		arrMeta.add(new Metadata("Unit", "Unità", "string"));
+		arrMeta.add(new Metadata("Unit", "unita", "string"));
 		arrMeta.add(new Metadata("2000", "2000", "double"));
 		arrMeta.add(new Metadata("2001", "2001", "double"));
 		arrMeta.add(new Metadata("2002", "2002", "double"));
@@ -43,12 +43,12 @@ public class SavedData
 		arrMeta.add(new Metadata("2017", "2017", "double"));
 	}
 	
-	//metodo che serve per ottenere i dati salvati
+	/**metodo che serve per ottenere i dati salvati*/
 	public static ArrayList<FisherAid> getArrFisherAid() {	
 		return arrFisherAid;
 	}
 	
-	//metodo che serve per ottenere i metadati
+	/**metodo che serve per ottenere i metadati*/
 	public static ArrayList<Metadata> getArrMeta() {
 		return arrMeta;
 	}

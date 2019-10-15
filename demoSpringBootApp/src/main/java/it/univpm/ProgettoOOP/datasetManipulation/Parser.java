@@ -17,7 +17,7 @@ public class Parser
 	public Parser(String dataset)
 	{
 		this.dataset = dataset;
-		this.afa = SavedData.getArrFisherAid();		//l'array è stato popolato
+		this.afa = SavedData.getArrFisherAid();		/**l'array è stato popolato*/
 	}
 	/**
 	 * Parser salva i dati scaricati in un'arraylist di oggetti

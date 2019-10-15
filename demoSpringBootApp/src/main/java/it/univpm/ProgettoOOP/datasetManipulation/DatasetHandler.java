@@ -46,7 +46,7 @@ public class DatasetHandler
 	    
 	    while ((line = in.readLine()) != null)
 	    {
-	    	if (!line.trim().isEmpty()) //considera anche gli spazi perchÃ¨ con gli spazi non funziona
+	    	if (!line.trim().isEmpty()) //considera anche gli spazi perché con gli spazi non funziona
 	    	{
 	    		out.println(line);
 	    	}
