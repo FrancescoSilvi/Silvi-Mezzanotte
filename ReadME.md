@@ -149,7 +149,14 @@
 <li>Scenario: una sequenza di azioni tra attori e sistema</li>
 <li>Use Case: una collezione di scenari di successi e fallimenti, ovvero una sequenza di azioni eseguite dall’attore, che ci permette di capire quali sono i servizi richiesti e forniti</li>
 </ul>
-<p><img src="https://lh3.googleusercontent.com/lgkWkAGjSNXdQc9TQ-NLJ8Q3V4LN0khB_HRw_N5o0fLDavZU62N7J5W5hTD8Zc3vUyFWVLxqK78U2A" alt="enter image description here" title="USE CASE DIAGRAM"></p>
+<p><img src="https://lh3.googleusercontent.com/9mjxIH_5wiyZOgr7rTt4yV0llFnc88sDMR1N_zsMKzUNjfMMBpYgynRmMwU_0FlQwbJFJT10mZLKiQ" alt=""></p>
+<h2 id="activity-diagram">Activity diagram</h2>
+<p>L’Activty diagram descrive le azioni compiute dagli attori e illustrate nello Use Case diagram.<br>
+Il diagramma illustra la successione temporale-logica delle azioni e il loro svolgimento.</p>
+<p><img src="https://lh3.googleusercontent.com/iXsyyNL04cLXuCBlp7CXXrv9yG_ErErlIjdkavHHb4vf0Cxgg6io1PpwXtKp9A6fLCuRR3KdTgqT2g" alt="" title="ACTIVITY DIAGRAM"></p>
+<h2 id="packages-diagram">Packages diagram</h2>
+<p>In questo diagramma vengono rappresentati i vari package utilizzati per implentare il software e come sono stati organizzati.</p>
+<p><img src="https://lh3.googleusercontent.com/VCAqpehyojEtRld01qJ4qvIiQbV_B0haKindC2C6ZgXsUT1EdF1AC2fkZzZHoujAB2ptjWPLeGJP8g" alt="" title="PACKAGES"></p>
 <h2 id="class-diagram">Class diagram</h2>
 <p>Il Class diagram permette di mettere in evidenza le relazioni tra le classi e gli oggetti utilizzati nel software.<br>
 Per ciascuna classe sono rappresentati i propri attributi (variabili e metodi), con relativi livelli di visibilità:</p>
