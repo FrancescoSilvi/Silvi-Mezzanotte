@@ -14,6 +14,8 @@
 <li>Restituzione dei dati riguardanti record filtrati</li>
 <li>Restituzione delle statistiche sui dati di uno specifico campo</li>
 <li>Restituzione delle statistiche sui dati di uno specifico campo, su record filtrati</li>
+<li>Restituzione delle occorrenze in uno specifico campo</li>
+<li>Restituzione delle occorrenze in uno specifico campo, su record filtrati</li>
 </ul>
 <p>Nel nostro caso il data-set rappresenta il contributo del settore della pesca in diversi paesi dal 2000 al 2017, sia in termini di milioni di euro che di percentuale sul PIL. I dati si dividono per:</p>
 <ul>
@@ -81,9 +83,9 @@
 </tbody>
 </table><p>Sono accettati i seguenti valori:</p>
 <ul>
-<li><strong>Colonna</strong>: freq / geo / unit</li>
-<li><strong>unità</strong>: % o €</li>
-<li><strong>anno</strong>: 2000…2017</li>
+<li><strong>Colonna</strong>: freq / geo / unit -&gt; indica il campo su cui effettuare la ricerca delle occorrenze tra quelli elencati</li>
+<li><strong>unità</strong>: % o € -&gt; specifica l’unità di misura dei dati da utilizzare per il calcolo delle statistiche o per l’applicazione dei filtri</li>
+<li><strong>anno</strong>: 2000…2017 -&gt; permette di scegliere l’anno su cui calcolare le statistiche</li>
 </ul>
 <p>Per quanto riguarda il filtraggio, i parametri passabili sono i seguenti:</p>
 
