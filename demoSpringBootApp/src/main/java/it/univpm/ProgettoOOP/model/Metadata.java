@@ -1,6 +1,6 @@
 package it.univpm.ProgettoOOP.model;
 
-/**classe che ospita i metadati*/
+/**Classe che ospita i metadati*/
 public class Metadata
 {
 	private String alias, sourceField, type;

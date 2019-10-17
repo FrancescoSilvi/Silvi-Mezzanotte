@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
 
+/**Classe contenente l'arraylist salvata*/
 public class SavedData
 {
 	private static ArrayList<FisherAid> arrFisherAid = new ArrayList<FisherAid>();	//arraylist nel quale saranno contenuti i dati

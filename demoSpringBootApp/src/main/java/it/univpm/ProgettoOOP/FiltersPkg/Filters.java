@@ -4,10 +4,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import it.univpm.ProgettoOOP.data.SavedData;
-import it.univpm.ProgettoOOP.model.CellAnno;
+import it.univpm.ProgettoOOP.Stats.Check;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
-
+/**Classe chiamata per applicare i filtri richiesti*/
 public class Filters {
 	private static ArrayList<FisherAid> AiutiPesca;
 	private static ArrayList<FisherAid> out;
@@ -33,47 +33,6 @@ public class Filters {
 		 AiutiPesca = fafa;
 	 }
 
-	 /**
-	 * Metodo che esegue il confronto fra due valori, in base a se sonon stringa o numerici e all'operatore
-	 */
-	 
-	public static boolean check (Object val, String operator, Object ValRif) {	
-		if(val instanceof String && ValRif instanceof String) {	//per le stringhe
-			switch (operator) {
-			case "in":
-				if (ValRif.equals(val)) return true;
-				return false;
-			case "nin":
-				if (!(ValRif.equals(val))) return true;
-				return false;
-			}
-		}else if(val instanceof Number && ValRif instanceof Number) {	//per i numeri
-			double val1 = ((Number) val).doubleValue();
-			double val2 = ((Number) ValRif).doubleValue();
-			switch (operator) {
-			case "gt":	//>
-				if (val1 > val2) return true;
-				return false;
-			case "gte":	//>=
-				if (val1 >= val2) return true;
-				return false;
-			case "lt":	//<
-				if (val1 < val2) return true;
-				return false;
-			case "lte":	//<=
-				if (val1 <= val2) return true;
-				return false;
-			case "in":	//==
-				if(val1 == val2) return true;
-				return false;
-			case "nin":	//!=
-				if(val1 != val2) return true;
-				return false;
-			}
-		}
-		return false;
-	}
-	
 	/**
 	 * Metodo che scorre i valori numerici e dunque esegue le opportune operazionni di casting
 	 * e chiama volta per volta il check
@@ -82,7 +41,7 @@ public class Filters {
 	public void ScorriAnni (String CampoRic, String operator, String val) {			
 		double ValRif = Double.parseDouble(val);
 		for (int i=0; i < AiutiPesca.size();i++) {
-			if(Filters.check(AiutiPesca.get(i).getAnni()[position], operator, ValRif )) 
+			if(new Check().FilterCK(AiutiPesca.get(i).getAnni()[position], operator, ValRif )) 	
 				out.add(AiutiPesca.get(i));
 		}
 	}
@@ -98,7 +57,7 @@ public class Filters {
 				//la riga precedente crea un metodo in base al campo di ricerca
 				try {
 					Object tmp = m.invoke(indice);	//richiama il metodo creato da Method
-					if (Filters.check(tmp, operator, val)) 
+					if(new Check().FilterCK(tmp, operator, val))	
 						out.add(indice);	//add aggiunge una riga ad out
 				}catch (IllegalAccessException e) {
 					e.printStackTrace();
@@ -124,11 +83,12 @@ public class Filters {
 	
 	public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 	{
-		CellAnno anno = new CellAnno(CampoRic);
-		if(anno.CheckAnno()) {							//si verifica se si crca in una colonna anno o in una colonna stringa
-			position = anno.getColonna();				//si prende il numero della cella dell'anno che si sta esaminando
-			ScorriAnni(CampoRic, operator, val);
-		}else ScorriStr(CampoRic, operator, val);
+	Check anno = new Check();
+		if(anno.getColonna(CampoRic)==-1) {							//si verifica se si crca in una colonna anno o in una colonna stringa
+			ScorriStr(CampoRic, operator, val);	
+		}else { position = anno.getColonna(CampoRic);				//si prende il numero della cella dell'anno che si sta esaminando
+				ScorriAnni(CampoRic, operator, val);
+		}
 		return out;
 	}
 }

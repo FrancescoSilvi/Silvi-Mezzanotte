@@ -18,6 +18,7 @@ import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 import it.univpm.ProgettoOOP.model.Metadata;
 
+/**Classe addetta alla cominucazione esterna*/
 @RestController
 public class RestControllerClass
 {

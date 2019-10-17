@@ -7,7 +7,7 @@ import java.util.HashMap;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
 /**
- * classe che restituisce un hashmap che informa su quante volte
+ * Classe che restituisce un hashmap che informa su quante volte
  * ogni stringa che è presente in una colonna si ripete
 */
 public class occorrenze {

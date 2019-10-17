@@ -1,10 +1,11 @@
 package it.univpm.ProgettoOOP.Stats;
 
 import java.util.ArrayList;
-
-import it.univpm.ProgettoOOP.model.CellAnno;
+import it.univpm.ProgettoOOP.Stats.Check;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
+/**Classe nella quale sono calcolati i valori di output
+ * delle statistiche */
 public class StatsCalc {
 	private ArrayList<StatObj> arrStats;
 	private ArrayList<FisherAid> afa;
@@ -15,8 +16,8 @@ public class StatsCalc {
 	public StatsCalc (ArrayList<FisherAid> afa, String Colonna) {
 		try{
 			this.afa = afa;
-			CellAnno anno = new CellAnno(Colonna);
-			j = anno.getColonna();
+			Check anno = new Check();
+			j = anno.getColonna(Colonna);
 			}catch(NumberFormatException e) {
 				e.printStackTrace(); }			
 	}

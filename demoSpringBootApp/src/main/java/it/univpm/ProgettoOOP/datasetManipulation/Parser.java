@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.model.FisherAid;
 
+/**Classe usata per popolare l'arraylist*/
 public class Parser
 {
 	private String dataset, str;

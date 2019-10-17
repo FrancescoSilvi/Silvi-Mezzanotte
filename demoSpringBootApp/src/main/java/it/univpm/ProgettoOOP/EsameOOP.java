@@ -10,12 +10,11 @@ import it.univpm.ProgettoOOP.data.SavedData;
 import it.univpm.ProgettoOOP.datasetManipulation.DatasetHandler;
 import it.univpm.ProgettoOOP.datasetManipulation.Parser;
 
+/**Nella classe del main viene fatta la richiesta di aprire il link fornito ed estrarne il dataset,
+ * in caso di errore viene comunicato che il sataset non è stato trovato*/
 @SpringBootApplication
 public class EsameOOP {
-/**
- * Nella classe del main viene fatta la richiesta di aprire il link fornito ed estrarne il dataset,
- * in caso di errore viene comunicato che il sataset non è stato trovato
- */
+
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		DatasetHandler dh = new DatasetHandler("http://data.europa.eu/euodp/data/api/3/action/package_show?id=JaHjwrKS416PSCHTJWbQA");
 		if (dh.downloadCSV())

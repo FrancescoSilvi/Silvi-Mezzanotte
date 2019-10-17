@@ -10,7 +10,7 @@ import java.net.URL;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+/**Classe alla quale è passato l'URL*/
 public class DatasetHandler
 {
 	private String strJSON, line;
