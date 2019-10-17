@@ -88,7 +88,8 @@
 <li><strong>unità</strong>: % o € -&gt; specifica l’unità di misura dei dati da utilizzare per il calcolo delle statistiche o per l’applicazione dei filtri</li>
 <li><strong>anno</strong>: 2000…2017 -&gt; permette di scegliere l’anno su cui calcolare le statistiche</li>
 </ul>
-<p>Per quanto riguarda il filtraggio, i parametri passabili sono i seguenti:</p>
+<p>Per quanto riguarda il filtraggio, va prima di tutto specificata la colonna su quale applicare il filtro (CampoRic); scegliere poi l’operatore (operator) tra quelli disponibili e il valore di riferimento (val).</p>
+<p>I parametri accettabili sono i seguenti:</p>
 
 <table>
 <thead>
@@ -155,21 +156,29 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td><img src="https://lh3.googleusercontent.com/gIbGDkbilITTY1Vkwnm3T3ZWab_hbcC0gocLw61IGnWt3-lf6LEGdGZPoCGPWixacysWuJmZWqL5tw" alt="enter image description here"></td>
 <td><img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"></td>
-<td></td>
-<td></td>
-<td></td>
+<td><img src="https://lh3.googleusercontent.com/Mtmx6Bc0WxwvNa29KA12Y-ISV4ryWhpykV1jb7oq3ubxw_PotKB5OVQFg2Fp6xA3lJ87GToBggPsMw" alt="enter image description here"></td>
+<td><img src="https://lh3.googleusercontent.com/3VE2RESuE-OdztYNsZ_Fh9yKh9nskzJnkh36F9OMK_Q0-3_wYJ2AFN87drmQD7V3-BTK_Er60IcSMQ" alt="enter image description here"></td>
+<td><img src="https://lh3.googleusercontent.com/rouPw1gqXi5JDu0jrzRUqHzTxDHr-iScfOhJDpDa1I-FkjY6UZNfV554Mve7AwI-nHklNuh5sBdznQ" alt="enter image description here"></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><img src="https://lh3.googleusercontent.com/uHx_dvVeqEFNQQ9rkkGedV-L_ZyUIwEDDz9bseHzJJZF7OmvXHDzPE7IEowk_wuOn2itODHFDp3oXQ" alt="enter image description here"></td>
+<td><img src="https://lh3.googleusercontent.com/8VOORlOLrKxL7p_HAkrJXLnXaw2i1p71s3XeaATQojVhp2Gy9cVKzRzrLvS2MN4jVWS4sS80YCWazg" alt=""></td>
+<td><img src="https://lh3.googleusercontent.com/BPN0bFA1Ezjo3uv_mE5P8NPx-Qx7Xrd_0ehNB3GcRpdIxmn4ke-Nn4fR9yxfzx5swe9swL08oxaIBw" alt="enter image description here"></td>
+<td><img src="https://lh3.googleusercontent.com/CPRBMWSX9z4dL6d0rXnXXu4C_e7aAwYo-RWKc16SQwp-zGZh1imL_CCA0eBXGFNO8j2v_BjuRSiUUQ" alt=""></td>
+<td><img src="https://lh3.googleusercontent.com/1LmM0JtMUM77NcDe7w40-I3WgY7E5VtGjK474r90kNtlnnSKqZpW4ZmG074zLK937ryKUgbHJZNmdQ" alt=""></td>
 </tr>
 </tbody>
-</table><h1 id="diagrammi-uml">Diagrammi UML</h1>
+</table><p>In questi esempi sono state testate le funzioni:</p>
+<ul>
+<li>Stampa dei dati</li>
+<li>Stampa dei metadati</li>
+<li>Stampa dei dati relativi ai paesi che nell’anno 2008 avevano un valore cella maggiore o uguale di 10</li>
+<li>Stampa delle statistiche del paese IT (Italia) nell’anno 2000</li>
+<li>Calcolo delle occorrenze della colonna “geo” sui dati che nell’anno 2010 avevano valore maggiore o uguale di 0,001</li>
+</ul>
+<h1 id="diagrammi-uml">Diagrammi UML</h1>
 <p>UML è un linguaggio di modellazione orientata agli oggetti che permette di modellare, descrivere e documentare la struttura di un’applicazione o il comportamento di un software.</p>
 <p>Graficamente ci permettte di mettere in evidenza funzionalità, componenti e relazioni del sistema.</p>
 <h2 id="use-case-diagram">Use Case diagram</h2>
