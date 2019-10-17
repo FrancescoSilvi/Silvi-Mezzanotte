@@ -187,5 +187,5 @@ Per ciascuna classe sono rappresentati i propri attributi (variabili e metodi), 
 <li>Public: flag verde</li>
 <li>Private: flag rosso</li>
 </ul>
-<p><img src="https://lh3.googleusercontent.com/DEPD_VgvgRgxGZ_T2cxa7lfl6XkjuperqVcNx8mlU6VNeog6rsoMNngc2Y3RXmrJ6SuwuZlNYkH4gw" alt="enter image description here" title="UML"></p>
+<p><img src="https://lh3.googleusercontent.com/tEV4kL84fJMSW410TbfiULu1IcwxX3LOAku7ZDBLl8Zmk6BuFTVdug17QyZXdpvOocuii2bwf17LIw" alt="enter image description here" title="Class diagram"></p>
 
