@@ -25,9 +25,8 @@
 <li>Anno</li>
 </ul>
 <h1 id="avvio-del-programma">Avvio del programma</h1>
-<p>Per eseguire il software basta lanciare il file .jar ottenuto dal codice sviluppato.</p>
-<p>Oppure si può fare ciò partendo dall’ambiente di sviluppo fornito da Eclipse tramite il comando Run As -&gt; Spring Boot APP.</p>
-<p>La Web App si attiva in ascolto alla porta <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+<p>Dall’ambiente di sviluppo di Eclipse va mandato in esecuzione il programma tramite il comando Run As -&gt; Spring Boot APP.</p>
+<p>A questo punto la Web App si attiva in ascolto alla porta <a href="http://localhost:8080">http://localhost:8080</a>.</p>
 <p>Sarà poi necessario un software di API testing (nel nostro caso è stato utilizzato Postman) per eseguire le richieste GET.</p>
 <h1 id="operazioni-eseguibili">Operazioni eseguibili</h1>
 <p>Nella seguente tabella sono riassunte le opzioni richiedibili dal client:</p>
