@@ -152,7 +152,8 @@
 <img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"><br>
 <img src="https://lh3.googleusercontent.com/8VOORlOLrKxL7p_HAkrJXLnXaw2i1p71s3XeaATQojVhp2Gy9cVKzRzrLvS2MN4jVWS4sS80YCWazg" alt=""></li>
 <li>Stampa dei dati relativi ai paesi che nell’anno 2008 avevano un valore cella maggiore o uguale di 10<br>
-<img src="https://lh3.googleusercontent.com/Mtmx6Bc0WxwvNa29KA12Y-ISV4ryWhpykV1jb7oq3ubxw_PotKB5OVQFg2Fp6xA3lJ87GToBggPsMw" alt="enter image description here"> <img src="https://lh3.googleusercontent.com/BPN0bFA1Ezjo3uv_mE5P8NPx-Qx7Xrd_0ehNB3GcRpdIxmn4ke-Nn4fR9yxfzx5swe9swL08oxaIBw" alt="enter image description here"></li>
+<img src="https://lh3.googleusercontent.com/Mtmx6Bc0WxwvNa29KA12Y-ISV4ryWhpykV1jb7oq3ubxw_PotKB5OVQFg2Fp6xA3lJ87GToBggPsMw" alt="enter image description here"><br>
+<img src="https://lh3.googleusercontent.com/BPN0bFA1Ezjo3uv_mE5P8NPx-Qx7Xrd_0ehNB3GcRpdIxmn4ke-Nn4fR9yxfzx5swe9swL08oxaIBw" alt="enter image description here"></li>
 <li>Stampa delle statistiche del paese IT (Italia) nell’anno 2000<br>
 <img src="https://lh3.googleusercontent.com/3VE2RESuE-OdztYNsZ_Fh9yKh9nskzJnkh36F9OMK_Q0-3_wYJ2AFN87drmQD7V3-BTK_Er60IcSMQ" alt="enter image description here"><br>
 <img src="https://lh3.googleusercontent.com/CPRBMWSX9z4dL6d0rXnXXu4C_e7aAwYo-RWKc16SQwp-zGZh1imL_CCA0eBXGFNO8j2v_BjuRSiUUQ" alt=""></li>
