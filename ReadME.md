@@ -147,7 +147,6 @@
 In questi esempi sono state testate le funzioni:</p>
 <ul>
 <li>Stampa dei dati<br>
-<a href="https://lh3.googleusercontent.com/gIbGDkbilITTY1Vkwnm3T3ZWab_hbcC0gocLw61IGnWt3-lf6LEGdGZPoCGPWixacysWuJmZWqL5tw">https://lh3.googleusercontent.com/gIbGDkbilITTY1Vkwnm3T3ZWab_hbcC0gocLw61IGnWt3-lf6LEGdGZPoCGPWixacysWuJmZWqL5tw</a><br>
 <img src="https://lh3.googleusercontent.com/uHx_dvVeqEFNQQ9rkkGedV-L_ZyUIwEDDz9bseHzJJZF7OmvXHDzPE7IEowk_wuOn2itODHFDp3oXQ" alt="enter image description here"></li>
 <li>Stampa dei metadati<br>
 <img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"> <img src="https://lh3.googleusercontent.com/8VOORlOLrKxL7p_HAkrJXLnXaw2i1p71s3XeaATQojVhp2Gy9cVKzRzrLvS2MN4jVWS4sS80YCWazg" alt=""></li>
