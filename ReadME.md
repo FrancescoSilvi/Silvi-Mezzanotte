@@ -19,6 +19,7 @@
 </ul>
 <p>Nel nostro caso il data-set rappresenta il contributo del settore della pesca in diversi paesi dal 2000 al 2017, sia in termini di milioni di euro che di percentuale sul PIL. I dati si dividono per:</p>
 <ul>
+<li>Frequenza di rilevazione (nel nostro caso annuale)</li>
 <li>Paese</li>
 <li>Unità di misura (milioni di euro o percentuale del PIL),</li>
 <li>Anno</li>
@@ -138,6 +139,34 @@
 <tr>
 <td>lte</td>
 <td>“&lt;=” trova i valori minori o uguali di quello richiesto</td>
+</tr>
+</tbody>
+</table><h1 id="esempi-test">Esempi test</h1>
+
+<table>
+<thead>
+<tr>
+<th>GET DATI</th>
+<th>GET METADATI</th>
+<th>GET DATI FILTRATI</th>
+<th>GET STATISTICHE FILTRATE</th>
+<th>GET OCCORRENZE SU DATI FILTRATI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table><h1 id="diagrammi-uml">Diagrammi UML</h1>
