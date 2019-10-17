@@ -13,31 +13,22 @@ public class Filters {
 	private static ArrayList<FisherAid> out;
 	private int position;
 	
-	/**
-	 * Primo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
-	 * e fornisce ai filtri l'intera lista di oggetti
-	 */
-	
+	/**Primo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
+	 * e fornisce ai filtri l'intera lista di oggetti*/
 	public Filters () {
 		out = new ArrayList<FisherAid>();
 		AiutiPesca = SavedData.getArrFisherAid();
 	}
 	
-	/**
-	 * Secondo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
-	 * e fornisce ai filtri una lista di oggetti già filtrati
-	 */
-	
+	/**Secondo costruttore che forma un nuovo arraylist di oggetti del tipo da restituire
+	 * e fornisce ai filtri una lista di oggetti già filtrati*/
 	 public Filters(ArrayList<FisherAid> fafa) {
 		 out = new ArrayList<FisherAid>();
 		 AiutiPesca = fafa;
 	 }
 
-	/**
-	 * Metodo che scorre i valori numerici e dunque esegue le opportune operazionni di casting
-	 * e chiama volta per volta il check
-	 */
-	
+	/**Metodo che scorre i valori numerici e dunque esegue le opportune operazionni di casting
+	 * e chiama volta per volta il check*/
 	public void ScorriAnni (String CampoRic, String operator, String val) {			
 		double ValRif = Double.parseDouble(val);
 		for (int i=0; i < AiutiPesca.size();i++) {
@@ -46,10 +37,7 @@ public class Filters {
 		}
 	}
 	
-	/**
-	 * Metodo che scorre i valori di tipo stringa e chiama volta per volta il check
-	 */	
-	
+	/**Metodo che scorre i valori di tipo stringa e chiama volta per volta il check*/
 	public void ScorriStr (String CampoRic, String operator, String val) {
 		for(FisherAid indice : AiutiPesca) {		//scorre gli ogetti (le righe)
 			try {
@@ -76,11 +64,8 @@ public class Filters {
 	
 	}
 	
-	/**
-	 * Il metodo SelectOut riceve i parametri del filtro e seleziona quale metodo
-	 * della sua stessa classe andare ad utilizzare in base al tipo di dati ricevuti
-	 */
-	
+	/**Il metodo SelectOut riceve i parametri del filtro e seleziona quale metodo
+	 * della sua stessa classe andare ad utilizzare in base al tipo di dati ricevuti*/
 	public ArrayList<FisherAid> SelectOut (String CampoRic, String operator, String val) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException 
 	{
 	Check anno = new Check();
