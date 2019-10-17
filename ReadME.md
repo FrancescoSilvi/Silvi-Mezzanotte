@@ -25,9 +25,8 @@
 <li>Anno</li>
 </ul>
 <h1 id="avvio-del-programma">Avvio del programma</h1>
-<p>Per eseguire il software basta lanciare il file .jar ottenuto dal codice sviluppato.</p>
-<p>Oppure si può fare ciò partendo dall’ambiente di sviluppo fornito da Eclipse tramite il comando Run As -&gt; Spring Boot APP.</p>
-<p>La Web App si attiva in ascolto alla porta <a href="http://localhost:8080">http://localhost:8080</a>.</p>
+<p>Dall’ambiente di sviluppo di Eclipse va mandato in esecuzione il programma tramite il comando Run As -&gt; Spring Boot APP.</p>
+<p>A questo punto la Web App si attiva in ascolto alla porta <a href="http://localhost:8080">http://localhost:8080</a>.</p>
 <p>Sarà poi necessario un software di API testing (nel nostro caso è stato utilizzato Postman) per eseguire le richieste GET.</p>
 <h1 id="operazioni-eseguibili">Operazioni eseguibili</h1>
 <p>Nella seguente tabella sono riassunte le opzioni richiedibili dal client:</p>
@@ -182,7 +181,7 @@ Il diagramma illustra la successione temporale-logica delle azioni e il loro svo
 <p><img src="https://lh3.googleusercontent.com/VCAqpehyojEtRld01qJ4qvIiQbV_B0haKindC2C6ZgXsUT1EdF1AC2fkZzZHoujAB2ptjWPLeGJP8g" alt="" title="PACKAGES"></p>
 <h2 id="class-diagram">Class diagram</h2>
 <p>Il Class diagram permette di mettere in evidenza le relazioni tra le classi e gli oggetti utilizzati nel software.<br>
-Per ciascuna classe sono rappresentati i propri attributi (variabili e metodi), con relativi livelli di visibilità:</p>
+Per ciascuna classe sono rappresentati i propri attributi, ovvero i suoi costruttori, metodi e variabili, con relativi livelli di visibilità:</p>
 <ul>
 <li>Public: flag verde</li>
 <li>Private: flag rosso</li>
