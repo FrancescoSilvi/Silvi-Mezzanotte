@@ -143,21 +143,22 @@
 </tr>
 </tbody>
 </table><h1 id="esempi-test">Esempi test</h1>
-<p>| GET DATI | GET METADATI  | GET DATI FILTRATI | GET STATISTICHE FILTRATE | GET OCCORRENZE SU DATI FILTRATI |<br>
-In questi esempi sono state testate le funzioni:</p>
+<p>In questi esempi sono state testate le funzioni:</p>
 <ul>
 <li>Stampa dei dati<br>
+<img src="https://lh3.googleusercontent.com/z89ykN3_IDaUDsLD3dp37LOj1rv_Urs6opefnjTgXFzyDWukgwPDcFPOuenvkrDhbiAv9lMC58wP8A" alt=""><br>
 <img src="https://lh3.googleusercontent.com/uHx_dvVeqEFNQQ9rkkGedV-L_ZyUIwEDDz9bseHzJJZF7OmvXHDzPE7IEowk_wuOn2itODHFDp3oXQ" alt="enter image description here"></li>
 <li>Stampa dei metadati<br>
-<img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"> <img src="https://lh3.googleusercontent.com/8VOORlOLrKxL7p_HAkrJXLnXaw2i1p71s3XeaATQojVhp2Gy9cVKzRzrLvS2MN4jVWS4sS80YCWazg" alt=""></li>
+<img src="https://lh3.googleusercontent.com/qhNkS99zHHYiXY0as-cN7fkQtSM8E5TjXvctI34ZkMnRjcQCalhbSnvOeef_ho2xYAZxioUUzCVlcA" alt="enter image description here"><br>
+<img src="https://lh3.googleusercontent.com/8VOORlOLrKxL7p_HAkrJXLnXaw2i1p71s3XeaATQojVhp2Gy9cVKzRzrLvS2MN4jVWS4sS80YCWazg" alt=""></li>
 <li>Stampa dei dati relativi ai paesi che nell’anno 2008 avevano un valore cella maggiore o uguale di 10<br>
 <img src="https://lh3.googleusercontent.com/Mtmx6Bc0WxwvNa29KA12Y-ISV4ryWhpykV1jb7oq3ubxw_PotKB5OVQFg2Fp6xA3lJ87GToBggPsMw" alt="enter image description here"> <img src="https://lh3.googleusercontent.com/BPN0bFA1Ezjo3uv_mE5P8NPx-Qx7Xrd_0ehNB3GcRpdIxmn4ke-Nn4fR9yxfzx5swe9swL08oxaIBw" alt="enter image description here"></li>
-<li>Stampa delle statistiche del paese IT (Italia) nell’anno 2000</li>
-</ul>
-<p><img src="https://lh3.googleusercontent.com/3VE2RESuE-OdztYNsZ_Fh9yKh9nskzJnkh36F9OMK_Q0-3_wYJ2AFN87drmQD7V3-BTK_Er60IcSMQ" alt="enter image description here"><img src="https://lh3.googleusercontent.com/CPRBMWSX9z4dL6d0rXnXXu4C_e7aAwYo-RWKc16SQwp-zGZh1imL_CCA0eBXGFNO8j2v_BjuRSiUUQ" alt=""></p>
-<ul>
+<li>Stampa delle statistiche del paese IT (Italia) nell’anno 2000<br>
+<img src="https://lh3.googleusercontent.com/3VE2RESuE-OdztYNsZ_Fh9yKh9nskzJnkh36F9OMK_Q0-3_wYJ2AFN87drmQD7V3-BTK_Er60IcSMQ" alt="enter image description here"><br>
+<img src="https://lh3.googleusercontent.com/CPRBMWSX9z4dL6d0rXnXXu4C_e7aAwYo-RWKc16SQwp-zGZh1imL_CCA0eBXGFNO8j2v_BjuRSiUUQ" alt=""></li>
 <li>Calcolo delle occorrenze della colonna “geo” sui dati che nell’anno 2010 avevano valore maggiore o uguale di 0,001<br>
-<img src="https://lh3.googleusercontent.com/rouPw1gqXi5JDu0jrzRUqHzTxDHr-iScfOhJDpDa1I-FkjY6UZNfV554Mve7AwI-nHklNuh5sBdznQ" alt="enter image description here"> <img src="https://lh3.googleusercontent.com/1LmM0JtMUM77NcDe7w40-I3WgY7E5VtGjK474r90kNtlnnSKqZpW4ZmG074zLK937ryKUgbHJZNmdQ" alt=""></li>
+<img src="https://lh3.googleusercontent.com/rouPw1gqXi5JDu0jrzRUqHzTxDHr-iScfOhJDpDa1I-FkjY6UZNfV554Mve7AwI-nHklNuh5sBdznQ" alt="enter image description here"><br>
+<img src="https://lh3.googleusercontent.com/1LmM0JtMUM77NcDe7w40-I3WgY7E5VtGjK474r90kNtlnnSKqZpW4ZmG074zLK937ryKUgbHJZNmdQ" alt=""></li>
 </ul>
 <h1 id="diagrammi-uml">Diagrammi UML</h1>
 <p>UML è un linguaggio di modellazione orientata agli oggetti che permette di modellare, descrivere e documentare la struttura di un’applicazione o il comportamento di un software.</p>
