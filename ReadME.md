@@ -181,7 +181,7 @@ Il diagramma illustra la successione temporale-logica delle azioni e il loro svo
 <p><img src="https://lh3.googleusercontent.com/VCAqpehyojEtRld01qJ4qvIiQbV_B0haKindC2C6ZgXsUT1EdF1AC2fkZzZHoujAB2ptjWPLeGJP8g" alt="" title="PACKAGES"></p>
 <h2 id="class-diagram">Class diagram</h2>
 <p>Il Class diagram permette di mettere in evidenza le relazioni tra le classi e gli oggetti utilizzati nel software.<br>
-Per ciascuna classe sono rappresentati i propri attributi (variabili e metodi), con relativi livelli di visibilità:</p>
+Per ciascuna classe sono rappresentati i propri attributi, ovvero i suoi costruttori, metodi e variabili, con relativi livelli di visibilità:</p>
 <ul>
 <li>Public: flag verde</li>
 <li>Private: flag rosso</li>
